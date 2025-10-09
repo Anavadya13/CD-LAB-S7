@@ -1,0 +1,23 @@
+lex and yacc
+  
+yacc -d assign.y
+lex assign.l
+gcc lex.yy.c y.tab.c -o assign -ll -ly
+./assign
+
+  
+lex only
+
+lex operators.l
+lex.yy.c
+gcc lex.yy.c -o operators -ll
+./operators
+
+
+  bnf
+
+
+bison -d calc.y         
+flex calc.l            
+gcc calc.tab.c lex.yy.c -o calc -lfl
+./calc
